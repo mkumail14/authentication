@@ -158,7 +158,9 @@
                     text: "Refreash your site.",
                     icon: "success"
                 });
-localStorage.setItem('MKA-Email',email)
+            localStorage.setItem('MKA-Email',email)
+            let location=localStorage.getItem('pendingSite')
+            window.location.href=location;
             } catch (error) {
                 console.error(error.code, error.message);
                 Swal.fire({
