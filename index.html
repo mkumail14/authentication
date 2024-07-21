@@ -153,7 +153,11 @@
             try {
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 console.log('Login successful');
-                window.location.href=`${localStorage.getItem("MKASITE")}`
+                Swal.fire({
+                    title: "Login Succesful!",
+                    text: "Refreash your site.",
+                    icon: "success"
+                });
 
             } catch (error) {
                 console.error(error.code, error.message);
